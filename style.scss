@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+
 @font-face {
   font-family: chillax;
   src: url(./fonts/63cffc0a3942456e003bc265_Chillax-Regular.woff);
@@ -27,6 +29,10 @@ body {
   color: rgb(216, 215, 215);
 }
 
+html {
+  font-size: clamp(16px, 1vh, 18px);
+}
+
 body {
   background-color: #121212;
 }
@@ -45,7 +51,7 @@ main {
     @include flexColumn(1rem);
     padding: 1rem;
 
-    .top {
+    .hero-top {
       width: 100%;
 
       img {
@@ -54,15 +60,14 @@ main {
       }
     }
 
-    .bottom {
+    .hero-bottom {
       background-color: #1e1e1e;
       padding: 1.8rem;
       border-radius: 0.6rem;
       @include flexColumn($gap: 4rem);
 
-      h4 {
-        font-family: Roboto sans-serif, Oxygen, Ubuntu, Cantarell, "Open Sans",
-          "Helvetica Neue", sans-serif;
+      h5 {
+        font-family: "Roboto Mono", sans-serif;
         text-transform: uppercase;
         font-weight: 500;
         font-size: 1rem;
@@ -81,7 +86,7 @@ main {
 
         p {
           font-family: satoshi;
-          opacity: 0.5;
+          opacity: 0.6;
           font-size: 1.35rem;
           line-height: 1.5;
         }
@@ -93,6 +98,7 @@ main {
           gap: 0.6rem;
           text-decoration: none;
           color: rgb(216, 215, 215);
+          font-family: "Roboto Mono", sans-serif;
 
           svg {
             height: 2.4rem;
@@ -114,6 +120,85 @@ main {
       }
     }
   }
+
+  .nums-ctr {
+    width: 100%;
+    padding: 2rem 1rem;
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    h3 {
+      font-size: 2.25rem;
+      font-family: chillax;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 0.88rem;
+      font-family: "Roboto Mono", sans-serif;
+      text-transform: uppercase;
+    }
+
+    .num1,
+    .num2,
+    .num3,
+    .num4 {
+      @include flexColumn(0.7rem);
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .philosophy-section {
+    width: 100%;
+    padding: 1rem;
+    @include flexColumn(1rem);
+
+    .philosophy-img-ctr {
+      width: 100%;
+
+      img {
+        width: 100%;
+        border-radius: 0.6rem;
+      }
+    }
+
+    .philosophy-texts-ctr {
+      background-color: #1e1e1e;
+      border-radius: 0.6rem;
+      padding: 1.8rem;
+      @include flexColumn($gap: 4rem);
+
+      h5 {
+        font-family: "Roboto Mono", sans-serif;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 1rem;
+      }
+
+      div {
+        @include flexColumn(1rem);
+
+        h2 {
+          font-family: chillax;
+          font-size: 2.2rem;
+          font-weight: 500;
+          text-transform: uppercase;
+          line-height: 1.1;
+        }
+
+        p {
+          font-family: satoshi;
+          opacity: 0.6;
+          font-size: 1.1rem;
+          line-height: 1.5;
+          column-count: 1;
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 991px) {
@@ -122,7 +207,7 @@ main {
       display: flex;
       flex-direction: row;
 
-      .top {
+      .hero-top {
         width: 50%;
 
         img {
@@ -134,7 +219,7 @@ main {
         }
       }
 
-      .bottom {
+      .hero-bottom {
         width: 50%;
         padding: 3rem;
         display: flex;
@@ -142,8 +227,8 @@ main {
         justify-content: space-between;
         border-radius: 1rem;
 
-        h4 {
-          font-size: 1.5rem;
+        h5 {
+          font-size: 1rem;
         }
 
         div {
@@ -151,9 +236,64 @@ main {
           gap: 1rem;
 
           h1 {
-            // font-size: 3.7rem;
-            font-size: 3rem;
+            font-size: 3.7rem;
+            // font-size: 3rem;
             line-height: 1.1;
+          }
+        }
+      }
+    }
+
+    .nums-ctr {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+      padding: 3rem;
+
+      h3 {
+        font-size: 2.9rem;
+        font-family: chillax;
+        font-weight: 600;
+      }
+    }
+
+    .philosophy-section {
+      flex-direction: row-reverse;
+
+      .philosophy-img-ctr {
+        width: 50%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+
+      .philosophy-texts-ctr {
+        width: 50%;
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 1rem;
+        gap: 9rem;
+
+        div {
+          gap: 1rem;
+
+          h2 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            line-height: 1.1;
+          }
+
+          p {
+            column-count: 2;
+            font-size: 1.3rem;
+            line-height: 1.5;
+            column-gap: 2rem;
+            text-align: balance;
           }
         }
       }
@@ -164,7 +304,7 @@ main {
 @media (min-width: 1440px) {
   main {
     .section-hero {
-      .bottom {
+      .hero-bottom {
         div {
           @include flexColumn(2rem);
           h1 {

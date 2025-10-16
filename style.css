@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
 @font-face {
   font-family: chillax;
   src: url(./fonts/63cffc0a3942456e003bc265_Chillax-Regular.woff);
@@ -17,6 +18,10 @@ body {
   width: 100%;
   min-height: 100%;
   color: rgb(216, 215, 215);
+}
+
+html {
+  font-size: clamp(16px, 1vh, 18px);
 }
 
 body {
@@ -41,14 +46,14 @@ main .section-hero {
   gap: 1rem;
   padding: 1rem;
 }
-main .section-hero .top {
+main .section-hero .hero-top {
   width: 100%;
 }
-main .section-hero .top img {
+main .section-hero .hero-top img {
   width: 100%;
   border-radius: 0.6rem;
 }
-main .section-hero .bottom {
+main .section-hero .hero-bottom {
   background-color: #1e1e1e;
   padding: 1.8rem;
   border-radius: 0.6rem;
@@ -56,39 +61,40 @@ main .section-hero .bottom {
   flex-direction: column;
   gap: 4rem;
 }
-main .section-hero .bottom h4 {
-  font-family: Roboto sans-serif, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+main .section-hero .hero-bottom h5 {
+  font-family: "Roboto Mono", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 1rem;
 }
-main .section-hero .bottom div {
+main .section-hero .hero-bottom div {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-main .section-hero .bottom div h1 {
+main .section-hero .hero-bottom div h1 {
   font-family: chillax;
   font-size: 2.4rem;
   font-weight: 500;
   text-transform: uppercase;
   line-height: 1.3;
 }
-main .section-hero .bottom div p {
+main .section-hero .hero-bottom div p {
   font-family: satoshi;
-  opacity: 0.5;
+  opacity: 0.6;
   font-size: 1.35rem;
   line-height: 1.5;
 }
-main .section-hero .bottom div a {
+main .section-hero .hero-bottom div a {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 0.6rem;
   text-decoration: none;
   color: rgb(216, 215, 215);
+  font-family: "Roboto Mono", sans-serif;
 }
-main .section-hero .bottom div a svg {
+main .section-hero .hero-bottom div a svg {
   height: 2.4rem;
   width: 2.4rem;
   background-color: #292929;
@@ -96,11 +102,87 @@ main .section-hero .bottom div a svg {
   border-radius: 50%;
   border: 1px solid rgb(216, 215, 215);
 }
-main .section-hero .bottom div a span {
+main .section-hero .hero-bottom div a span {
   font-family: Roboto sans-serif, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 0.9rem;
+}
+main .nums-ctr {
+  width: 100%;
+  padding: 2rem 1rem;
+  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+main .nums-ctr h3 {
+  font-size: 2.25rem;
+  font-family: chillax;
+  font-weight: 600;
+}
+main .nums-ctr p {
+  font-size: 0.88rem;
+  font-family: "Roboto Mono", sans-serif;
+  text-transform: uppercase;
+}
+main .nums-ctr .num1,
+main .nums-ctr .num2,
+main .nums-ctr .num3,
+main .nums-ctr .num4 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  align-items: center;
+  justify-content: center;
+}
+main .philosophy-section {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .philosophy-section .philosophy-img-ctr {
+  width: 100%;
+}
+main .philosophy-section .philosophy-img-ctr img {
+  width: 100%;
+  border-radius: 0.6rem;
+}
+main .philosophy-section .philosophy-texts-ctr {
+  background-color: #1e1e1e;
+  border-radius: 0.6rem;
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+main .philosophy-section .philosophy-texts-ctr h5 {
+  font-family: "Roboto Mono", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1rem;
+}
+main .philosophy-section .philosophy-texts-ctr div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .philosophy-section .philosophy-texts-ctr div h2 {
+  font-family: chillax;
+  font-size: 2.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+main .philosophy-section .philosophy-texts-ctr div p {
+  font-family: satoshi;
+  opacity: 0.6;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  -moz-column-count: 1;
+       column-count: 1;
 }
 
 @media (min-width: 991px) {
@@ -108,10 +190,10 @@ main .section-hero .bottom div a span {
     display: flex;
     flex-direction: row;
   }
-  main .section-hero .top {
+  main .section-hero .hero-top {
     width: 50%;
   }
-  main .section-hero .top img {
+  main .section-hero .hero-top img {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
@@ -119,7 +201,7 @@ main .section-hero .bottom div a span {
     border-radius: 0.6rem;
     border-radius: 1rem;
   }
-  main .section-hero .bottom {
+  main .section-hero .hero-bottom {
     width: 50%;
     padding: 3rem;
     display: flex;
@@ -127,24 +209,74 @@ main .section-hero .bottom div a span {
     justify-content: space-between;
     border-radius: 1rem;
   }
-  main .section-hero .bottom h4 {
-    font-size: 1.5rem;
+  main .section-hero .hero-bottom h5 {
+    font-size: 1rem;
   }
-  main .section-hero .bottom div {
+  main .section-hero .hero-bottom div {
     gap: 1rem;
   }
-  main .section-hero .bottom div h1 {
-    font-size: 3rem;
+  main .section-hero .hero-bottom div h1 {
+    font-size: 3.7rem;
     line-height: 1.1;
+  }
+  main .nums-ctr {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    padding: 3rem;
+  }
+  main .nums-ctr h3 {
+    font-size: 2.9rem;
+    font-family: chillax;
+    font-weight: 600;
+  }
+  main .philosophy-section {
+    flex-direction: row-reverse;
+  }
+  main .philosophy-section .philosophy-img-ctr {
+    width: 50%;
+  }
+  main .philosophy-section .philosophy-img-ctr img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+  }
+  main .philosophy-section .philosophy-texts-ctr {
+    width: 50%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1rem;
+    gap: 9rem;
+  }
+  main .philosophy-section .philosophy-texts-ctr div {
+    gap: 1rem;
+  }
+  main .philosophy-section .philosophy-texts-ctr div h2 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 1.1;
+  }
+  main .philosophy-section .philosophy-texts-ctr div p {
+    -moz-column-count: 2;
+         column-count: 2;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+    text-align: balance;
   }
 }
 @media (min-width: 1440px) {
-  main .section-hero .bottom div {
+  main .section-hero .hero-bottom div {
     display: flex;
     flex-direction: column;
     gap: 2rem;
   }
-  main .section-hero .bottom div h1 {
+  main .section-hero .hero-bottom div h1 {
     font-size: 4rem;
   }
 }/*# sourceMappingURL=style.css.map */
