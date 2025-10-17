@@ -276,7 +276,7 @@ main .section-team-ctr-2 {
   color: white;
 }
 main .section-team-ctr-2 .person1 {
-  background: url("https://assets-global.website-files.com/63cffb7c16ab3347fc9734c8/63d2ccbd7d003dfb6a1bdecb_team-01-p-1080.webp") no-repeat center/cover;
+  background: url("./assets/team-01.webp") no-repeat center/cover;
   aspect-ratio: 1/1;
   width: 100%;
   border-radius: 1rem;
@@ -331,7 +331,7 @@ main .section-team-ctr-2 .person1 .person-detail h6 {
   font-size: 1rem;
 }
 main .section-team-ctr-2 .person2 {
-  background: url("https://assets-global.website-files.com/63cffb7c16ab3347fc9734c8/63d2ccbd2e12fa747e999689_team-02-p-500.webp") no-repeat center/cover;
+  background: url("./assets/team-02.webp") no-repeat center/cover;
   aspect-ratio: 1/1;
   width: 100%;
   border-radius: 1rem;
@@ -386,7 +386,7 @@ main .section-team-ctr-2 .person2 .person-detail h6 {
   font-size: 1rem;
 }
 main .section-team-ctr-2 .person3 {
-  background: url("https://assets-global.website-files.com/63cffb7c16ab3347fc9734c8/63d2ccbdc1f945f817bf4fd7_team-03-p-500.webp") no-repeat center/cover;
+  background: url("./assets/team-03.webp") no-repeat center/cover;
   aspect-ratio: 1/1;
   width: 100%;
   border-radius: 1rem;

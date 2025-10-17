@@ -297,12 +297,9 @@ main {
     color: white;
 
     $teamCards: (
-      ".person1":
-        "https://assets-global.website-files.com/63cffb7c16ab3347fc9734c8/63d2ccbd7d003dfb6a1bdecb_team-01-p-1080.webp",
-      ".person2":
-        "https://assets-global.website-files.com/63cffb7c16ab3347fc9734c8/63d2ccbd2e12fa747e999689_team-02-p-500.webp",
-      ".person3":
-        "https://assets-global.website-files.com/63cffb7c16ab3347fc9734c8/63d2ccbdc1f945f817bf4fd7_team-03-p-500.webp",
+      ".person1": "./assets/team-01.webp",
+      ".person2": "./assets/team-02.webp",
+      ".person3": "./assets/team-03.webp",
     );
 
     @each $key, $val in $teamCards {
@@ -720,7 +717,7 @@ main {
       }
     }
 
-        .section-contact {
+    .section-contact {
       .contact-card {
         flex-direction: row;
         padding: 3rem;
