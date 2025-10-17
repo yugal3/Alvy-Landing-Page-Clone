@@ -11,4 +11,4 @@ This Project is a Alvy Landing Page Clone built using HTML, and SCSS.
 
 # Preview 
 
-![Preview](./assets/2025-10-16+14-11-14.gif)
+![Preview](./assets/2025-10-17+14-22-06.gif)

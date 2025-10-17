@@ -106,12 +106,11 @@ main {
             background-color: #292929;
             padding: 0.55rem;
             border-radius: 50%;
-            border: 1px solid rgb(216, 215, 215);
+            border: 1px solid #494949;
           }
 
           span {
-            font-family: Roboto sans-serif, Oxygen, Ubuntu, Cantarell,
-              "Open Sans", "Helvetica Neue", sans-serif;
+            font-family: "Roboto Mono", sans-serif;
             text-transform: uppercase;
             font-weight: 600;
             font-size: 0.9rem;
@@ -199,6 +198,324 @@ main {
       }
     }
   }
+
+  .vision-section {
+    width: 100%;
+    padding: 0 1rem 1rem 1rem;
+    @include flexColumn(1rem);
+
+    .vision-img-ctr {
+      width: 100%;
+
+      img {
+        width: 100%;
+        border-radius: 0.6rem;
+      }
+    }
+
+    .vision-texts-ctr {
+      background-color: #1e1e1e;
+      border-radius: 0.6rem;
+      padding: 1.8rem;
+      @include flexColumn($gap: 4rem);
+
+      h5 {
+        font-family: "Roboto Mono", sans-serif;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 1rem;
+      }
+
+      div {
+        @include flexColumn(1rem);
+
+        h2 {
+          font-family: chillax;
+          font-size: 2.2rem;
+          font-weight: 500;
+          text-transform: uppercase;
+          line-height: 1.1;
+        }
+
+        p {
+          font-family: satoshi;
+          opacity: 0.6;
+          font-size: 1.1rem;
+          line-height: 1.5;
+          column-count: 1;
+        }
+      }
+    }
+  }
+
+  .section-team-ctr-1 {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    h2 {
+      font-family: chillax;
+      font-size: 2rem;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    .hide-mobile-screen {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      gap: 0.8rem;
+
+      .btn-r-t-arrow-wrapper {
+        height: 2.4rem;
+        width: 2.4rem;
+        background-color: #292929;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 1px solid #494949;
+      }
+
+      p {
+        font-family: "Roboto Mono", sans-serif;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .section-team-ctr-2 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    gap: 1rem;
+    padding: 1rem;
+    color: white;
+
+    $teamCards: (
+      ".person1":
+        "https://assets-global.website-files.com/63cffb7c16ab3347fc9734c8/63d2ccbd7d003dfb6a1bdecb_team-01-p-1080.webp",
+      ".person2":
+        "https://assets-global.website-files.com/63cffb7c16ab3347fc9734c8/63d2ccbd2e12fa747e999689_team-02-p-500.webp",
+      ".person3":
+        "https://assets-global.website-files.com/63cffb7c16ab3347fc9734c8/63d2ccbdc1f945f817bf4fd7_team-03-p-500.webp",
+    );
+
+    @each $key, $val in $teamCards {
+      #{$key} {
+        background: url($val) no-repeat center/cover;
+        aspect-ratio: 1 / 1;
+        width: 100%;
+        border-radius: 1rem;
+        @include flexColumn();
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+
+        .logo-ctr {
+          width: 100%;
+          display: flex;
+          gap: 0.7rem;
+          padding: 1rem;
+          align-items: center;
+          justify-content: flex-end;
+
+          .logo {
+            padding: 0.8rem;
+            background-color: rgba(153, 153, 153, 0.205);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #858585;
+            backdrop-filter: blur(10px);
+          }
+        }
+
+        .person-detail {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          text-transform: uppercase;
+          background-color: rgba(143, 143, 143, 0.404);
+          border: 1px solid #858585;
+          backdrop-filter: blur(12px);
+          padding: 1rem;
+          border-radius: 0.5rem;
+          gap: 1rem;
+
+          h4 {
+            font-family: chillax;
+            font-weight: 500;
+            font-size: 1.3rem;
+          }
+
+          h6 {
+            font-family: "Roboto Mono", sans-serif;
+            font-weight: 400;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .section-join {
+    width: 100%;
+    @include flexColumn(1rem);
+    padding: 0 1rem 1rem 1rem;
+
+    .join-img-ctr {
+      width: 100%;
+
+      img {
+        width: 100%;
+        border-radius: 1rem;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    .join-texts-ctr {
+      background-color: rgb(30, 30, 30);
+      border-radius: 1rem;
+      @include flexColumn();
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 1.75rem;
+      gap: 4rem;
+      text-transform: uppercase;
+
+      div {
+        h5 {
+          font-family: "Roboto Mono", sans-serif;
+          font-size: 1rem;
+          font-weight: 500;
+          color: rgba(216, 215, 215, 0.6);
+        }
+
+        h2 {
+          font-family: chillax;
+          margin-top: 0.6lh;
+          font-size: 2rem;
+        }
+      }
+
+      .find-job-btn-ctr {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+        font-family: satoshi;
+        text-decoration: none;
+        color: rgb(216, 215, 215);
+
+        .btn-r-t-arrow-wrapper {
+          height: 2.4rem;
+          width: 2.4rem;
+          background-color: #292929;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        p {
+          font-family: "Roboto Mono", sans-serif;
+          font-size: 1rem;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .section-contact {
+    padding: 0 1rem 1rem 1rem;
+
+    .contact-card {
+      width: 100%;
+      padding: 1.75rem;
+      background-color: rgb(206, 189, 99);
+      border-radius: 1rem;
+      text-transform: uppercase;
+      color: rgb(27, 27, 27);
+      @include flexColumn(2rem);
+
+      div {
+        @include flexColumn(1rem);
+
+        h5 {
+          font-family: "Roboto Mono", sans-serif;
+          font-size: 1rem;
+          font-weight: 500;
+        }
+
+        h3 {
+          font-size: 2.6rem;
+          font-family: chillax;
+          text-wrap: balance;
+          line-height: 3rem;
+          font-weight: 500;
+        }
+      }
+
+      .contact-btn-ctr {
+        width: 100%;
+
+        button {
+          padding: 1rem;
+          display: flex;
+          gap: 0.8rem;
+          color: rgb(216, 215, 215);
+          text-transform: uppercase;
+          font-family: "Roboto Mono", sans-serif;
+          font-size: 1rem;
+          font-weight: 400;
+          align-items: center;
+          justify-content: center;
+          background-color: #121212;
+          border: none;
+          border-radius: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 767px) {
+  main {
+    .section-team-ctr-1 {
+      padding: 1.9rem 2rem;
+
+      .hide-mobile-screen {
+        display: flex;
+      }
+    }
+
+    .section-team-ctr-2 {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    .section-contact {
+      .contact-card {
+        div {
+          h3 {
+            font-size: 2.8rem;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 991px) {
@@ -214,14 +531,13 @@ main {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          border-radius: 0.6rem;
           border-radius: 1rem;
         }
       }
 
       .hero-bottom {
         width: 50%;
-        padding: 3rem;
+        padding: 4rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -267,12 +583,13 @@ main {
           height: 100%;
           object-fit: cover;
           object-position: center;
+          border-radius: 1rem;
         }
       }
 
       .philosophy-texts-ctr {
         width: 50%;
-        padding: 3rem;
+        padding: 4rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -298,6 +615,95 @@ main {
         }
       }
     }
+
+    .vision-section {
+      flex-direction: row;
+
+      .vision-img-ctr {
+        width: 50%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          border-radius: 1rem;
+        }
+      }
+
+      .vision-texts-ctr {
+        width: 50%;
+        padding: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 1rem;
+        gap: 9rem;
+
+        div {
+          gap: 1rem;
+
+          h2 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            line-height: 1.1;
+          }
+
+          p {
+            column-count: 2;
+            font-size: 1.3rem;
+            line-height: 1.5;
+            column-gap: 2rem;
+            text-align: balance;
+          }
+        }
+      }
+    }
+
+    .section-team-ctr-2 {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr;
+    }
+
+    .section-join {
+      flex-direction: row;
+
+      .join-img-ctr,
+      .join-texts-ctr {
+        width: 50%;
+      }
+
+      .join-texts-ctr {
+        padding: 3rem;
+        gap: 10rem;
+      }
+    }
+
+    .section-contact {
+      .contact-card {
+        flex-direction: row;
+        padding: 3rem;
+
+        div {
+          h3 {
+            font-size: 3.5rem;
+            font-weight: 600;
+            line-height: 1.15;
+          }
+        }
+
+        .contact-btn-ctr {
+          flex-shrink: 2;
+          @include flexColumn();
+          align-items: flex-end;
+          justify-content: flex-end;
+
+          button {
+            width: fit-content;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -310,6 +716,25 @@ main {
           h1 {
             font-size: 4rem;
           }
+        }
+      }
+    }
+
+        .section-contact {
+      .contact-card {
+        flex-direction: row;
+        padding: 3rem;
+
+        div {
+          h3 {
+            font-size: 5rem;
+            font-weight: 600;
+            line-height: 1.15;
+          }
+        }
+
+        .contact-btn-ctr {
+          flex-shrink: 2.5;
         }
       }
     }
